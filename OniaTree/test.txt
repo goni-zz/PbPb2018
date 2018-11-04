@@ -1,1 +1,0 @@
-/afs/cern.ch/work/g/goni/Trigger/2018PbPb/Oniatree_10_3_1/Usercode/PbPbRun2018ForestingSetup_v0/step3_0.root
