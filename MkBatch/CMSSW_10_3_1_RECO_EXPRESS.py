@@ -15,7 +15,8 @@ process = cms.Process("RECO")
 #    fileNames = cms.untracked.vstring('file:SED_INPUT')
 #)
 
-process.source = cms.Source("NewEventStreamFileReader",
+#process.source = cms.Source("NewEventStreamFileReader",
+process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(options.inputFiles[0])
 )
 
