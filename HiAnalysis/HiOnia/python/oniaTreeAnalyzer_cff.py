@@ -121,7 +121,7 @@ def oniaTreeAnalyzer(process, muonTriggerList=[[],[],[],[]], HLTProName='HLT', m
                                     fillHistos        = cms.bool(False),
                                     minimumFlag       = cms.bool(False),
                                     fillSingleMuons   = cms.bool(True),
-                                    fillRecoTracks    = cms.bool(False),
+                                    fillRecoTracks    = cms.bool(True),
                                     histFileName      = cms.string(outputFileName),		
                                     dataSetName       = cms.string("Jpsi_DataSet.root"),
                                     
@@ -139,6 +139,7 @@ def oniaTreeAnalyzer(process, muonTriggerList=[[],[],[],[]], HLTProName='HLT', m
     process.hionia.muonLessPV       = cms.bool(False)
     process.hionia.CentralitySrc    = cms.InputTag("")
     process.hionia.CentralityBinSrc = cms.InputTag("")
-    process.hionia.srcTracks        = cms.InputTag("generalTracks")       
+    process.hionia.srcTracks        = cms.InputTag("generalTracks")
 
-    process.oniaTreeAna = cms.EndPath(process.patMuonSequence * process.onia2MuMuPatGlbGlb * process.hionia )
+    #process.oniaTreeAna = cms.EndPath(process.patMuonSequence * process.onia2MuMuPatGlbGlb * process.hionia )
+    process.oniaTreeAna = cms.Path(process.patMuonSequence * process.onia2MuMuPatGlbGlb * process.hionia )
