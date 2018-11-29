@@ -121,7 +121,7 @@ def oniaTreeAnalyzer(process, muonTriggerList=[[],[],[],[]], HLTProName='HLT', m
                                     fillHistos        = cms.bool(False),
                                     minimumFlag       = cms.bool(False),
                                     fillSingleMuons   = cms.bool(True),
-                                    fillRecoTracks    = cms.bool(True),
+                                    fillRecoTracks    = cms.bool(False),
                                     histFileName      = cms.string(outputFileName),		
                                     dataSetName       = cms.string("Jpsi_DataSet.root"),
                                     
